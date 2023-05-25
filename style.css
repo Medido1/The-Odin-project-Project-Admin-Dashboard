@@ -1,0 +1,278 @@
+:root {
+  --grey : #e2e8f0;
+  --blue : #3b82f6;
+}
+
+/* CSS reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* utilities */
+
+.flex_grp, .flex_col,
+.search_container, .user_info_top, .user_info_bottom,
+.header_bottom, .buttons,
+.sidebar_title, .nav_item,
+.card_links, .trending_user{
+  display: flex;
+}
+
+.flex_col {
+  flex-direction: column;
+}
+
+body, header,
+.main, .cards {
+  display: grid;
+}
+
+/* icons */
+
+.icon, .dashboard_icon,
+.avatar,
+.avatar_big {
+  height: auto;
+  cursor: pointer;
+}
+
+.icon {
+  width: 25px;
+}
+
+.share_icon {
+  transform: rotate(-90deg);
+}
+
+.dashboard_icon {
+  width: 50px;
+}
+
+.avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.avatar_big {
+  width: 70px;
+  border-radius: 50%;
+}
+
+/* body  */
+
+body {
+  grid-template-columns: 1fr 3fr;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header */
+
+.header {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  row-gap: 1rem;
+  grid-column: 2;
+  padding: 1.25rem 2.5rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.search_container {
+  align-items: center;
+  gap: 1rem;
+  grid-column: 1 / 3;
+}
+
+.search_container input {
+  height: 1.75rem;
+  background-color: var(--grey);
+  border: none;
+  border-radius: .75rem;
+  width: 80%;
+}
+
+.user_info_top{
+  grid-column: 3;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 4rem;
+}
+
+.user_info_bottom{
+  align-items: center;
+  gap: 1rem;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.user_info_bottom div p:first-child{
+  font-size: .875rem;
+}
+
+.user_info_bottom>div p:last-child {
+  font-size: 1.375rem;
+}
+
+.buttons {
+  gap: 1.5rem;
+  align-items: center;
+  grid-column: 3;
+}
+
+.buttons .btn {
+  background-color: var(--blue);
+  padding: .5rem 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 1.25rem;
+  font-size: 1.125rem;
+}
+
+/* sidebar */
+
+.sidebar_section {
+  color: white;
+ background-color: var(--blue);
+ grid-row: 1 / 3;
+ padding: 1.25rem;
+ font-size: 1.375rem;
+ font-weight: 600;
+}
+
+.sidebar_title {
+  gap: 1rem;
+  align-items: center;
+}
+
+.sidebar_title h1 {
+  font-size: 2rem;
+}
+
+.nav {
+  margin-top: 3rem;
+  gap: 1rem;
+  padding-left: .75rem;
+}
+
+.nav_item {
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.nav_item p {
+  cursor: pointer;
+}
+
+/* main */
+
+.main {
+  padding: 1.25rem 2.5rem;
+  background-color: var(--grey);
+  grid-template-columns: 3fr 1fr;
+}
+
+.section_title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* project section */
+
+.cards {
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  border-left: 5px solid orange;
+  background-color: white;
+  width: 410px;
+  height: 220px;
+}
+
+.card_header,
+.annoucement_header {
+  color: black;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.card_links {
+  gap: 1rem;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+}
+
+/* announcement section */
+
+.announcements_section>div,
+.card, .trending {
+  background-color: white;
+  padding: 1.25rem;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  color: #6b7280;
+  font-size: .875rem;
+}
+
+.announcements_section {
+  margin-bottom: 2rem;
+}
+
+.announcements_section .flex_col .announcement:nth-child(-n+2){
+  border-bottom: 2px solid #6b7280;
+}
+
+.announcement {
+  padding: .5rem;
+}
+
+/* trending section */
+
+.trending, .trending_user {
+  gap: 1rem;
+}
+
+.trending_user_tag {
+  color: black;
+  font-weight: 600;
+}
