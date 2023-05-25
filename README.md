@@ -5,3 +5,7 @@ This is a solution to the admin dashboard project that is part of <a href="https
 ### Screenshot
 
 ![Screenshot](./img/FireShot%20Capture%20007%20-%20Admin%20Dashboard%20-%20127.0.0.1.png)
+
+### Links
+
+- Live Site URL: <a href="https://medido1.github.io/The-Odin-project-Project-Admin-Dashboard/">Live site</a>
